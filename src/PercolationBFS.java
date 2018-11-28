@@ -18,14 +18,14 @@ public class PercolationBFS extends PercolationDFSFast {
 			//	row = row + rowDelta[k];
 			//	col = col + colDelta[k];
 				yo = (row + rowDelta[k])*myGrid.length + (col+colDelta[k]);
-				row = yo/myGrid.length;
-				col = yo%myGrid.length;
-				if (inBounds(row,col) && isFull(row,col)) {
+				int newrow  = yo/myGrid.length;
+				int newcol = yo%myGrid.length;
+				if (inBounds(newrow,newcol) && isFull(newrow,newcol)) {
 					break;
 				}
-				if (inBounds(row,col) && isOpen(row,col)) {
-					qp.add(row*myGrid.length+col);
-					myGrid[row][col] = FULL;
+				if (inBounds(newrow,newcol) && isOpen(newrow,newcol)) {
+					qp.add(newrow*myGrid.length+newcol);
+					myGrid[newrow][newcol] = FULL;
 				}
 			}
 		}
