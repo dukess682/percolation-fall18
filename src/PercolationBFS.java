@@ -17,6 +17,7 @@ public class PercolationBFS extends PercolationDFSFast {
 			for (int k =0; k<rowDelta.length;k++) {
 			//	row = row + rowDelta[k];
 			//	col = col + colDelta[k];
+				yo = (row + rowDelta[k])*myGrid.length + (col+colDelta[k]);
 				row = yo/myGrid.length;
 				col = yo%myGrid.length;
 				if (inBounds(row,col) && isFull(row,col)) {
