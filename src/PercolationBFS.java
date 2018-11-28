@@ -10,6 +10,7 @@ public class PercolationBFS extends PercolationDFSFast {
 		Queue<Integer> qp = new LinkedList<>();
 		int [] rowDelta = {-1,1,0,0};
 		int [] colDelta = {0,0,-1,1};
+		
 		myGrid[row][col] = FULL;
 		qp.add(row*myGrid.length+col);
 		while (qp.size()!=0) {
