@@ -9,6 +9,8 @@ grid mean	stddev	time
 200	0.591	0.010	8.377
 400	0.590	0.006	118.197
 800	0.594	0.004	1872.062
+Exception in thread "main" java.lang.StackOverflowError
+	at PercolationDFS.dfs(PercolationDFS.java:109)
 
 Copy/Paste results from PercolationStats using PercolationDFSFast
 
